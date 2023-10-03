@@ -1,38 +1,75 @@
+/* Reset de estilos para eliminar márgenes y rellenos predeterminados */
+body, h1, h2, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo general para la aplicación */
 .App {
+  font-family: Arial, sans-serif;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Estilo para la barra de navegación horizontal */
+.section-nav {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  background-color: #333;
+  padding: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.section-nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  transition: background-color 0.3s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.section-nav a:hover {
+  background-color: #555;
+}
+
+/* Estilo para el código QR */
+.qr-code {
+  margin-top: 20px;
+}
+
+/* Estilos para la página de inicio */
+.home {
+  padding: 20px;
+}
+
+.home img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estilos para las secciones */
+.section {
+  padding: 20px;
+}
+
+/* Estilos para los platillos */
+.section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.section li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Media queries para hacer la aplicación responsive */
+@media (max-width: 768px) {
+  .section-nav {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .section-nav a {
+    padding: 10px 0;
   }
 }
+
